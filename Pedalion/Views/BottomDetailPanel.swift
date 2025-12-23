@@ -11,6 +11,9 @@ struct BottomDetailPanel: View {
     let item: Item
     @Binding var selectedTab: DetailTab?
     @Binding var selectedDetent: PresentationDetent
+    @State private var cartViewModel = CartViewModel.shared
+    @Environment(TabRouter.self) private var tabRouter
+    @State private var showGoToCartBtn: Bool = false
     
     var body: some View {
         ZStack{
@@ -23,15 +26,26 @@ struct BottomDetailPanel: View {
                 .padding(.top)
                 scrollView
                 if selectedTab != nil{
-                    bottomBuyNowBox
+                    if showGoToCartBtn{
+                        goToCartView
+                    }else{
+                        bottomBuyNowBox
+                    }
                 }
             }
             .presentationCornerRadius(50)
+        }
+        .onAppear {
+            checkItemAlreadyInCart()
         }
     }
 }
 
 extension BottomDetailPanel{
+    
+    func checkItemAlreadyInCart(){
+        showGoToCartBtn = cartViewModel.itemPresentInCart(item: item) ? true : false
+    }
     
     private var scrollView: some View{
         ScrollView {
@@ -95,12 +109,14 @@ extension BottomDetailPanel{
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width, height: 120)
             HStack(alignment: .center){
-                Text(item.price)
+                Text(item.price.toCurrencyString())
                     .font(.system(size: 24, weight: .regular))
                     .foregroundStyle(Color(red: 61/255.0, green: 156/255.0, blue: 234/255.0))
                 Spacer()
                     .frame(width: 60)
                 Button {
+                    cartViewModel.addItemToCart(item: item)
+                    showGoToCartBtn = true
                     
                 } label: {
                     Image(.addToCart)
@@ -111,6 +127,28 @@ extension BottomDetailPanel{
             .offset(y: 10)
         }
     }
+    
+    private var goToCartView: some View{
+        ZStack(alignment: .center){
+            Button {
+                tabRouter.selectedTab = .cart
+            } label: {
+                HStack(spacing: 8) {
+                        Image(systemName: "cart.fill")
+                        Text("View Cart")
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundStyle(.white)
+                    .padding(.vertical, 15)
+                    .padding(.horizontal, 20)
+                    .frame(maxWidth: .infinity)
+                    .clipShape(Capsule())
+                    .background(.blue)
+            }
+            
+        }
+    }
+
 }
 
 
@@ -121,4 +159,5 @@ extension BottomDetailPanel{
             selectedTab: .constant(.description),
             selectedDetent: .constant(.medium)
         )
+    .environment(TabRouter())
     }

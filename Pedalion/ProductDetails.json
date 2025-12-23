@@ -1,283 +1,285 @@
 [
-  {
-    "id": 1,
-    "imageName": "Bicycle1",
-    "itemType": "Road bike",
-    "itemName": "PEUGEOT - LR01",
-    "price": "$1,999.99",
-    "description": "The PEUGEOT LR01 is a lightweight performance-oriented road bike engineered for riders who value speed and endurance. Its carbon fiber construction ensures excellent stiffness while keeping overall weight low for efficient climbing. The bike offers smooth handling, making it suitable for long-distance rides and high-speed descents. Designed with comfort in mind, it reduces road vibrations on extended journeys. The aerodynamic frame geometry helps maintain momentum with less effort. Whether you are training seriously or riding competitively, this bike delivers consistent performance. It is ideal for riders looking to push their limits on paved roads. The LR01 balances precision, durability, and comfort in one refined package.",
-    "specification": {
-      "frame": "Carbon Fiber",
-      "gears": "22-Speed",
-      "brakes": "Hydraulic Disc",
-      "weight": "8.2 kg"
+    {
+        "id": 1,
+        "imageName": "Bicycle1",
+        "itemType": "Road bike",
+        "itemName": "PEUGEOT - LR01",
+        "price": 1999.99,
+        "description": "The PEUGEOT LR01 is a lightweight performance-oriented road bike engineered for riders who value speed and endurance. Its carbon fiber construction ensures excellent stiffness while keeping overall weight low for efficient climbing. The bike offers smooth handling, making it suitable for long-distance rides and high-speed descents. Designed with comfort in mind, it reduces road vibrations on extended journeys. The aerodynamic frame geometry helps maintain momentum with less effort. Whether you are training seriously or riding competitively, this bike delivers consistent performance. It is ideal for riders looking to push their limits on paved roads. The LR01 balances precision, durability, and comfort in one refined package.",
+        "specification": {
+            "frame": "Carbon Fiber",
+            "gears": "22-Speed",
+            "brakes": "Hydraulic Disc",
+            "weight": "8.2 kg"
+        }
+    },
+    {
+        "id": 2,
+        "imageName": "Bicycle2",
+        "itemType": "Mountain bike",
+        "itemName": "SMITH - Trail Pro",
+        "price": 1549.00,
+        "description": "The SMITH Trail Pro is built to confidently tackle rugged trails and uneven terrain. Its durable aluminum alloy frame provides strength without adding unnecessary weight. The bike offers excellent control during steep climbs and fast descents. Designed for trail enthusiasts, it performs reliably on dirt paths, rocky sections, and forest tracks. The front suspension absorbs shocks, reducing rider fatigue on longer rides. Mechanical disc brakes ensure consistent stopping power in varying weather conditions. This bike is well-suited for adventurous riders who enjoy exploring off-road environments. It combines durability, stability, and comfort for everyday trail riding.",
+        "specification": {
+            "frame": "Aluminum Alloy",
+            "gears": "18-Speed",
+            "brakes": "Mechanical Disc",
+            "suspension": "Front Suspension"
+        }
+    },
+    {
+        "id": 3,
+        "imageName": "Bicycle3",
+        "itemType": "Electrical",
+        "itemName": "PILOT - E-Charge X",
+        "price": 2799.50,
+        "description": "The PILOT E-Charge X is designed to make commuting effortless and enjoyable. Its electric motor provides smooth and responsive assistance, reducing strain during uphill rides. The long-lasting battery allows riders to travel extended distances without frequent charging. This bike is ideal for daily urban commuting as well as leisure rides. The motor assistance blends naturally with pedaling for a seamless riding experience. It helps riders maintain consistent speed even in traffic-heavy environments. The frame design prioritizes comfort and stability. Overall, it is a reliable electric bike for modern city lifestyles.",
+        "specification": {
+            "motor": "250W Rear Hub",
+            "battery": "36V 14Ah",
+            "range": "90 km",
+            "chargingTime": "4–5 hours"
+        }
+    },
+    {
+        "id": 4,
+        "imageName": "Bicycle1",
+        "itemType": "Road bike",
+        "itemName": "TREK - Domane SL",
+        "price": 2299.99,
+        "description": "The TREK Domane SL is an endurance-focused road bike built for long and demanding rides. Its frame is engineered to reduce road vibrations, helping riders stay comfortable over extended distances. The geometry promotes a relaxed riding position without sacrificing efficiency. This bike excels on rough pavement and long stretches of road. Hydraulic disc brakes provide reliable stopping power in all conditions. Wider tires enhance stability and grip during cornering. It is a great choice for cyclists who prioritize comfort and endurance. The Domane SL delivers smooth, confident performance mile after mile.",
+        "specification": {
+            "frame": "Carbon",
+            "gears": "24-Speed",
+            "brakes": "Hydraulic Disc",
+            "tireSize": "700x32c"
+        }
+    },
+    {
+        "id": 5,
+        "imageName": "Bicycle2",
+        "itemType": "Mountain bike",
+        "itemName": "GIANT - Talon 3",
+        "price": 1199.00,
+        "description": "The GIANT Talon 3 is a versatile hardtail mountain bike designed for beginners and casual riders. Its aluminum frame offers a good balance of strength and lightweight performance. The bike handles well on trails, gravel paths, and uneven surfaces. It provides stable handling that builds rider confidence. Disc brakes ensure dependable stopping power in different riding conditions. The 29-inch wheels roll smoothly over obstacles. This bike is suitable for both fitness riding and trail exploration. It is a dependable option for everyday off-road adventures.",
+        "specification": {
+            "frame": "ALUXX Aluminum",
+            "gears": "16-Speed",
+            "brakes": "Disc Brakes",
+            "wheelSize": "29 inch"
+        }
+    },
+    {
+        "id": 6,
+        "imageName": "Bicycle3",
+        "itemType": "Electrical",
+        "itemName": "SPECIALIZED - Turbo Vado",
+        "price": 3499.99,
+        "description": "The Specialized Turbo Vado is a premium electric bike designed for city commuting and longer rides. Its intelligent motor assistance adapts smoothly to rider input. The high-capacity battery supports extended range for daily use. Comfort-focused geometry ensures a relaxed riding posture. Integrated technology enhances safety and riding efficiency. The bike performs well on both urban streets and suburban roads. Its build quality reflects Specialized’s attention to detail. This e-bike is ideal for riders seeking performance, comfort, and reliability.",
+        "specification": {
+            "motor": "Specialized 2.0",
+            "battery": "710Wh",
+            "range": "120 km",
+            "display": "LCD Smart Display"
+        }
+    },
+    {
+        "id": 7,
+        "imageName": "Helmet1",
+        "itemType": "Accessory",
+        "itemName": "SMITH - Signal Helmet",
+        "price": 129.99,
+        "description": "The SMITH Signal Helmet is designed to deliver enhanced protection and comfort. It features MIPS technology to reduce rotational impact forces. The lightweight design ensures minimal strain during long rides. Multiple vents promote excellent airflow and cooling. The helmet fits securely and comfortably for everyday cycling. It is suitable for road and casual riding. Safety certifications ensure reliable protection standards. This helmet combines modern safety features with practical design.",
+        "specification": {
+            "technology": "MIPS",
+            "ventilation": "30 Vents",
+            "weight": "300 g",
+            "certification": "CPSC"
+        }
+    },
+    
+    {
+        "id": 8,
+        "imageName": "Helmet1",
+        "itemType": "Accessory",
+        "itemName": "GIRO - Register MIPS",
+        "price": 89.50,
+        "description": "The GIRO Register MIPS helmet is designed for everyday cyclists who value comfort and protection. It features an in-mold construction that keeps the helmet lightweight while maintaining durability. The MIPS system adds an extra layer of safety by reducing rotational forces during impact. Its Roc Loc fit system allows easy adjustments for a secure and personalized fit. Ample ventilation ensures proper airflow, keeping riders cool on long rides. The helmet is suitable for commuting, recreational cycling, and fitness rides. Its clean and simple design appeals to a wide range of riders. Overall, it offers dependable protection at an accessible price point.",
+        "specification": {
+            "technology": "MIPS",
+            "fitSystem": "Roc Loc",
+            "weight": "310 g",
+            "size": "Universal"
+        }
+    },
+    {
+        "id": 9,
+        "imageName": "Bicycle1",
+        "itemType": "Road bike",
+        "itemName": "BMC - Teammachine SLR",
+        "price": 2899.99,
+        "description": "The BMC Teammachine SLR is a race-ready road bike engineered for peak performance. Its carbon frame delivers exceptional stiffness for powerful acceleration. The lightweight construction makes climbing hills feel effortless. Precision handling ensures confidence during high-speed descents and tight corners. Hydraulic disc brakes provide reliable stopping power in all conditions. The bike is optimized for competitive riders and serious enthusiasts. Its aggressive geometry supports an aerodynamic riding position. This bike excels in races, fast group rides, and intensive training sessions.",
+        "specification": {
+            "frame": "Carbon",
+            "gears": "22-Speed",
+            "brakes": "Hydraulic Disc",
+            "weight": "7.9 kg"
+        }
+    },
+    {
+        "id": 10,
+        "imageName": "Bicycle2",
+        "itemType": "Mountain bike",
+        "itemName": "SCOTT - Aspect 950",
+        "price": 1349.75,
+        "description": "The SCOTT Aspect 950 is a dependable mountain bike built for trail riding and exploration. Its aluminum frame offers durability while remaining lightweight. The bike provides stable handling on uneven terrain and loose surfaces. Front suspension absorbs shocks from rocks and roots. Disc brakes deliver consistent braking performance in wet or dry conditions. The geometry is designed for comfort and control. It suits beginner to intermediate riders looking to explore trails. This bike is ideal for recreational off-road adventures.",
+        "specification": {
+            "frame": "Aluminum",
+            "gears": "18-Speed",
+            "brakes": "Disc Brakes",
+            "wheelSize": "27.5 inch"
+        }
+    },
+    {
+        "id": 11,
+        "imageName": "Bicycle3",
+        "itemType": "Electrical",
+        "itemName": "RAD POWER - RadCity 5",
+        "price": 1899.00,
+        "description": "The RadCity 5 is an electric bike designed for urban commuting and daily transportation. Its powerful hub motor delivers smooth acceleration and consistent assistance. The upright riding position enhances comfort and visibility in city traffic. A long-range battery supports extended daily rides. Integrated lighting improves safety during low-light conditions. The bike is built to handle cargo and commuting accessories. It performs well on paved roads and bike lanes. This e-bike is a practical and reliable choice for city riders.",
+        "specification": {
+            "motor": "750W Hub",
+            "battery": "48V",
+            "range": "80 km",
+            "assistLevels": "5"
+        }
+    },
+    {
+        "id": 12,
+        "imageName": "Helmet1",
+        "itemType": "Accessory",
+        "itemName": "POC - Octal Race",
+        "price": 199.99,
+        "description": "The POC Octal Race helmet is built for high-performance road cycling. Its design focuses on maximum ventilation and cooling efficiency. The lightweight structure reduces fatigue during long and intense rides. An EPS liner provides excellent impact absorption. The helmet is aerodynamically optimized for speed. It fits securely while remaining comfortable over extended periods. This helmet is trusted by professional and competitive cyclists. It delivers a balance of safety, airflow, and performance.",
+        "specification": {
+            "technology": "EPS Liner",
+            "ventilation": "Extreme",
+            "weight": "270 g",
+            "certification": "CE"
+        }
+    },
+    {
+        "id": 13,
+        "imageName": "Bicycle1",
+        "itemType": "Road bike",
+        "itemName": "CANNONDALE - CAAD13",
+        "price": 2099.00,
+        "description": "The Cannondale CAAD13 is a high-performance aluminum road bike with race-inspired geometry. Its SmartForm alloy frame offers stiffness comparable to carbon bikes. The bike delivers sharp handling and responsive acceleration. Disc brakes provide dependable stopping power in all weather conditions. The aggressive design supports fast and efficient riding. It is suitable for racing, training, and spirited group rides. The lightweight build enhances climbing efficiency. This bike is ideal for riders seeking speed and precision in an aluminum frame.",
+        "specification": {
+            "frame": "SmartForm Alloy",
+            "gears": "22-Speed",
+            "brakes": "Disc Brakes",
+            "weight": "8.4 kg"
+        }
+    },
+    {
+        "id": 14,
+        "imageName": "Bicycle2",
+        "itemType": "Mountain bike",
+        "itemName": "PILOT - Chromoly",
+        "price": 1699.00,
+        "description": "The PILOT Chromoly mountain bike is built for strength and long-term durability. Its chromoly steel frame absorbs trail vibrations effectively. The bike provides a stable and confident ride on rough terrain. Hydraulic disc brakes ensure strong and precise braking. The geometry supports controlled handling on technical trails. Large wheels roll smoothly over obstacles. It is well-suited for riders who value toughness and reliability. This bike performs consistently on demanding trail conditions.",
+        "specification": {
+            "frame": "Chromoly Steel",
+            "gears": "16-Speed",
+            "brakes": "Hydraulic Disc",
+            "wheelSize": "29 inch"
+        }
+    },
+    {
+        "id": 15,
+        "imageName": "Bicycle3",
+        "itemType": "Electrical",
+        "itemName": "COWBOY - C4 ST",
+        "price": 3199.00,
+        "description": "The Cowboy C4 ST is a sleek and modern electric bike designed for urban riders. Its minimalist design integrates technology seamlessly into the frame. The electric motor provides smooth and natural pedal assistance. App connectivity allows riders to track rides and performance data. The bike offers a comfortable and upright riding position. Its lightweight build enhances maneuverability in city traffic. The battery supports daily commuting needs. This e-bike combines style, technology, and practicality.",
+        "specification": {
+            "motor": "250W",
+            "battery": "360Wh",
+            "range": "70 km",
+            "connectivity": "Bluetooth"
+        }
+    },
+    {
+        "id": 16,
+        "imageName": "Helmet1",
+        "itemType": "Accessory",
+        "itemName": "BELL - Falcon XR",
+        "price": 149.00,
+        "description": "The Bell Falcon XR helmet is designed for performance-focused cyclists. It combines aerodynamic shaping with effective ventilation. MIPS technology enhances safety by reducing rotational impacts. The helmet fits securely and comfortably for long rides. Overbrow ventilation channels air efficiently. Its lightweight design minimizes strain during intense cycling sessions. The helmet suits road racing and high-speed rides. It offers a balance of protection, comfort, and speed.",
+        "specification": {
+            "technology": "MIPS",
+            "ventilation": "Overbrow",
+            "weight": "295 g",
+            "fit": "Adjustable"
+        }
+    },
+    {
+        "id": 17,
+        "imageName": "Bicycle1",
+        "itemType": "Road bike",
+        "itemName": "PINARELLO - Paris",
+        "price": 3099.99,
+        "description": "The Pinarello Paris is an endurance road bike crafted with Italian design excellence. Its carbon frame prioritizes comfort over long distances. The geometry reduces rider fatigue on extended rides. Hydraulic disc brakes provide consistent stopping performance. The bike maintains responsiveness while offering a smooth ride quality. It is ideal for endurance events and long training sessions. The design reflects Pinarello’s racing heritage. This bike blends elegance, comfort, and performance.",
+        "specification": {
+            "frame": "Carbon",
+            "gears": "24-Speed",
+            "brakes": "Hydraulic Disc",
+            "weight": "8.1 kg"
+        }
+    },
+    {
+        "id": 18,
+        "imageName": "Bicycle2",
+        "itemType": "Mountain bike",
+        "itemName": "MERIDA - Big Nine",
+        "price": 1429.00,
+        "description": "The Merida Big Nine is a cross-country mountain bike designed for speed and efficiency. Its lightweight aluminum frame supports fast acceleration. The bike handles well on climbs and flat trails. Large wheels improve rolling efficiency over rough terrain. Disc brakes provide reliable stopping power. The geometry supports an aggressive yet controlled riding style. It is suitable for fitness riding and racing. This bike delivers a balanced mix of speed and control.",
+        "specification": {
+            "frame": "Aluminum",
+            "gears": "18-Speed",
+            "brakes": "Disc Brakes",
+            "wheelSize": "29 inch"
+        }
+    },
+    {
+        "id": 19,
+        "imageName": "Bicycle3",
+        "itemType": "Electrical",
+        "itemName": "VANMOOF - S5",
+        "price": 3498.00,
+        "description": "The VanMoof S5 is a smart electric bike with a clean and futuristic design. Integrated technology enhances security and convenience. The motor delivers smooth assistance for city riding. Built-in anti-theft features provide peace of mind. The frame design hides cables and components for a sleek appearance. The bike offers a comfortable riding posture. Its battery supports long daily commutes. This e-bike is ideal for tech-savvy urban riders.",
+        "specification": {
+            "motor": "Front Hub",
+            "battery": "487Wh",
+            "range": "100 km",
+            "security": "Anti-theft"
+        }
+    },
+    {
+        "id": 20,
+        "imageName": "Helmet1",
+        "itemType": "Accessory",
+        "itemName": "LAZER - Blade+",
+        "price": 99.99,
+        "description": "The Lazer Blade+ helmet is designed for comfort and everyday protection. Its KinetiCore technology enhances impact protection. The helmet provides efficient ventilation for cooling airflow. Lightweight construction ensures comfort during long rides. The fit system allows easy size adjustments. It is suitable for both road and mountain biking. The design balances safety and affordability. This helmet is a practical choice for regular cyclists.",
+        "specification": {
+            "technology": "KinetiCore",
+            "ventilation": "Efficient",
+            "weight": "320 g",
+            "size": "Universal"
+        }
     }
-  },
-  {
-    "id": 2,
-    "imageName": "Bicycle2",
-    "itemType": "Mountain bike",
-    "itemName": "SMITH - Trail Pro",
-    "price": "$1,549.00",
-    "description": "The SMITH Trail Pro is built to confidently tackle rugged trails and uneven terrain. Its durable aluminum alloy frame provides strength without adding unnecessary weight. The bike offers excellent control during steep climbs and fast descents. Designed for trail enthusiasts, it performs reliably on dirt paths, rocky sections, and forest tracks. The front suspension absorbs shocks, reducing rider fatigue on longer rides. Mechanical disc brakes ensure consistent stopping power in varying weather conditions. This bike is well-suited for adventurous riders who enjoy exploring off-road environments. It combines durability, stability, and comfort for everyday trail riding.",
-    "specification": {
-      "frame": "Aluminum Alloy",
-      "gears": "18-Speed",
-      "brakes": "Mechanical Disc",
-      "suspension": "Front Suspension"
-    }
-  },
-  {
-    "id": 3,
-    "imageName": "Bicycle3",
-    "itemType": "Electrical",
-    "itemName": "PILOT - E-Charge X",
-    "price": "$2,799.50",
-    "description": "The PILOT E-Charge X is designed to make commuting effortless and enjoyable. Its electric motor provides smooth and responsive assistance, reducing strain during uphill rides. The long-lasting battery allows riders to travel extended distances without frequent charging. This bike is ideal for daily urban commuting as well as leisure rides. The motor assistance blends naturally with pedaling for a seamless riding experience. It helps riders maintain consistent speed even in traffic-heavy environments. The frame design prioritizes comfort and stability. Overall, it is a reliable electric bike for modern city lifestyles.",
-    "specification": {
-      "motor": "250W Rear Hub",
-      "battery": "36V 14Ah",
-      "range": "90 km",
-      "chargingTime": "4–5 hours"
-    }
-  },
-  {
-    "id": 4,
-    "imageName": "Bicycle1",
-    "itemType": "Road bike",
-    "itemName": "TREK - Domane SL",
-    "price": "$2,299.99",
-    "description": "The TREK Domane SL is an endurance-focused road bike built for long and demanding rides. Its frame is engineered to reduce road vibrations, helping riders stay comfortable over extended distances. The geometry promotes a relaxed riding position without sacrificing efficiency. This bike excels on rough pavement and long stretches of road. Hydraulic disc brakes provide reliable stopping power in all conditions. Wider tires enhance stability and grip during cornering. It is a great choice for cyclists who prioritize comfort and endurance. The Domane SL delivers smooth, confident performance mile after mile.",
-    "specification": {
-      "frame": "Carbon",
-      "gears": "24-Speed",
-      "brakes": "Hydraulic Disc",
-      "tireSize": "700x32c"
-    }
-  },
-  {
-    "id": 5,
-    "imageName": "Bicycle2",
-    "itemType": "Mountain bike",
-    "itemName": "GIANT - Talon 3",
-    "price": "$1,199.00",
-    "description": "The GIANT Talon 3 is a versatile hardtail mountain bike designed for beginners and casual riders. Its aluminum frame offers a good balance of strength and lightweight performance. The bike handles well on trails, gravel paths, and uneven surfaces. It provides stable handling that builds rider confidence. Disc brakes ensure dependable stopping power in different riding conditions. The 29-inch wheels roll smoothly over obstacles. This bike is suitable for both fitness riding and trail exploration. It is a dependable option for everyday off-road adventures.",
-    "specification": {
-      "frame": "ALUXX Aluminum",
-      "gears": "16-Speed",
-      "brakes": "Disc Brakes",
-      "wheelSize": "29 inch"
-    }
-  },
-  {
-    "id": 6,
-    "imageName": "Bicycle3",
-    "itemType": "Electrical",
-    "itemName": "SPECIALIZED - Turbo Vado",
-    "price": "$3,499.99",
-    "description": "The Specialized Turbo Vado is a premium electric bike designed for city commuting and longer rides. Its intelligent motor assistance adapts smoothly to rider input. The high-capacity battery supports extended range for daily use. Comfort-focused geometry ensures a relaxed riding posture. Integrated technology enhances safety and riding efficiency. The bike performs well on both urban streets and suburban roads. Its build quality reflects Specialized’s attention to detail. This e-bike is ideal for riders seeking performance, comfort, and reliability.",
-    "specification": {
-      "motor": "Specialized 2.0",
-      "battery": "710Wh",
-      "range": "120 km",
-      "display": "LCD Smart Display"
-    }
-  },
-  {
-    "id": 7,
-    "imageName": "Helmet1",
-    "itemType": "Accessory",
-    "itemName": "SMITH - Signal Helmet",
-    "price": "$129.99",
-    "description": "The SMITH Signal Helmet is designed to deliver enhanced protection and comfort. It features MIPS technology to reduce rotational impact forces. The lightweight design ensures minimal strain during long rides. Multiple vents promote excellent airflow and cooling. The helmet fits securely and comfortably for everyday cycling. It is suitable for road and casual riding. Safety certifications ensure reliable protection standards. This helmet combines modern safety features with practical design.",
-    "specification": {
-      "technology": "MIPS",
-      "ventilation": "30 Vents",
-      "weight": "300 g",
-      "certification": "CPSC"
-    }
-  },
-  {
-      "id": 8,
-      "imageName": "Helmet1",
-      "itemType": "Accessory",
-      "itemName": "GIRO - Register MIPS",
-      "price": "$89.50",
-      "description": "The GIRO Register MIPS helmet is designed for everyday cyclists who value comfort and protection. It features an in-mold construction that keeps the helmet lightweight while maintaining durability. The MIPS system adds an extra layer of safety by reducing rotational forces during impact. Its Roc Loc fit system allows easy adjustments for a secure and personalized fit. Ample ventilation ensures proper airflow, keeping riders cool on long rides. The helmet is suitable for commuting, recreational cycling, and fitness rides. Its clean and simple design appeals to a wide range of riders. Overall, it offers dependable protection at an accessible price point.",
-      "specification": {
-        "technology": "MIPS",
-        "fitSystem": "Roc Loc",
-        "weight": "310 g",
-        "size": "Universal"
-      }
-    },
-    {
-      "id": 9,
-      "imageName": "Bicycle1",
-      "itemType": "Road bike",
-      "itemName": "BMC - Teammachine SLR",
-      "price": "$2,899.99",
-      "description": "The BMC Teammachine SLR is a race-ready road bike engineered for peak performance. Its carbon frame delivers exceptional stiffness for powerful acceleration. The lightweight construction makes climbing hills feel effortless. Precision handling ensures confidence during high-speed descents and tight corners. Hydraulic disc brakes provide reliable stopping power in all conditions. The bike is optimized for competitive riders and serious enthusiasts. Its aggressive geometry supports an aerodynamic riding position. This bike excels in races, fast group rides, and intensive training sessions.",
-      "specification": {
-        "frame": "Carbon",
-        "gears": "22-Speed",
-        "brakes": "Hydraulic Disc",
-        "weight": "7.9 kg"
-      }
-    },
-    {
-      "id": 10,
-      "imageName": "Bicycle2",
-      "itemType": "Mountain bike",
-      "itemName": "SCOTT - Aspect 950",
-      "price": "$1,349.75",
-      "description": "The SCOTT Aspect 950 is a dependable mountain bike built for trail riding and exploration. Its aluminum frame offers durability while remaining lightweight. The bike provides stable handling on uneven terrain and loose surfaces. Front suspension absorbs shocks from rocks and roots. Disc brakes deliver consistent braking performance in wet or dry conditions. The geometry is designed for comfort and control. It suits beginner to intermediate riders looking to explore trails. This bike is ideal for recreational off-road adventures.",
-      "specification": {
-        "frame": "Aluminum",
-        "gears": "18-Speed",
-        "brakes": "Disc Brakes",
-        "wheelSize": "27.5 inch"
-      }
-    },
-    {
-      "id": 11,
-      "imageName": "Bicycle3",
-      "itemType": "Electrical",
-      "itemName": "RAD POWER - RadCity 5",
-      "price": "$1,899.00",
-      "description": "The RadCity 5 is an electric bike designed for urban commuting and daily transportation. Its powerful hub motor delivers smooth acceleration and consistent assistance. The upright riding position enhances comfort and visibility in city traffic. A long-range battery supports extended daily rides. Integrated lighting improves safety during low-light conditions. The bike is built to handle cargo and commuting accessories. It performs well on paved roads and bike lanes. This e-bike is a practical and reliable choice for city riders.",
-      "specification": {
-        "motor": "750W Hub",
-        "battery": "48V",
-        "range": "80 km",
-        "assistLevels": "5"
-      }
-    },
-    {
-      "id": 12,
-      "imageName": "Helmet1",
-      "itemType": "Accessory",
-      "itemName": "POC - Octal Race",
-      "price": "$199.99",
-      "description": "The POC Octal Race helmet is built for high-performance road cycling. Its design focuses on maximum ventilation and cooling efficiency. The lightweight structure reduces fatigue during long and intense rides. An EPS liner provides excellent impact absorption. The helmet is aerodynamically optimized for speed. It fits securely while remaining comfortable over extended periods. This helmet is trusted by professional and competitive cyclists. It delivers a balance of safety, airflow, and performance.",
-      "specification": {
-        "technology": "EPS Liner",
-        "ventilation": "Extreme",
-        "weight": "270 g",
-        "certification": "CE"
-      }
-    },
-    {
-      "id": 13,
-      "imageName": "Bicycle1",
-      "itemType": "Road bike",
-      "itemName": "CANNONDALE - CAAD13",
-      "price": "$2,099.00",
-      "description": "The Cannondale CAAD13 is a high-performance aluminum road bike with race-inspired geometry. Its SmartForm alloy frame offers stiffness comparable to carbon bikes. The bike delivers sharp handling and responsive acceleration. Disc brakes provide dependable stopping power in all weather conditions. The aggressive design supports fast and efficient riding. It is suitable for racing, training, and spirited group rides. The lightweight build enhances climbing efficiency. This bike is ideal for riders seeking speed and precision in an aluminum frame.",
-      "specification": {
-        "frame": "SmartForm Alloy",
-        "gears": "22-Speed",
-        "brakes": "Disc Brakes",
-        "weight": "8.4 kg"
-      }
-    },
-    {
-      "id": 14,
-      "imageName": "Bicycle2",
-      "itemType": "Mountain bike",
-      "itemName": "PILOT - Chromoly",
-      "price": "$1,699.00",
-      "description": "The PILOT Chromoly mountain bike is built for strength and long-term durability. Its chromoly steel frame absorbs trail vibrations effectively. The bike provides a stable and confident ride on rough terrain. Hydraulic disc brakes ensure strong and precise braking. The geometry supports controlled handling on technical trails. Large wheels roll smoothly over obstacles. It is well-suited for riders who value toughness and reliability. This bike performs consistently on demanding trail conditions.",
-      "specification": {
-        "frame": "Chromoly Steel",
-        "gears": "16-Speed",
-        "brakes": "Hydraulic Disc",
-        "wheelSize": "29 inch"
-      }
-    },
-    {
-      "id": 15,
-      "imageName": "Bicycle3",
-      "itemType": "Electrical",
-      "itemName": "COWBOY - C4 ST",
-      "price": "$3,199.00",
-      "description": "The Cowboy C4 ST is a sleek and modern electric bike designed for urban riders. Its minimalist design integrates technology seamlessly into the frame. The electric motor provides smooth and natural pedal assistance. App connectivity allows riders to track rides and performance data. The bike offers a comfortable and upright riding position. Its lightweight build enhances maneuverability in city traffic. The battery supports daily commuting needs. This e-bike combines style, technology, and practicality.",
-      "specification": {
-        "motor": "250W",
-        "battery": "360Wh",
-        "range": "70 km",
-        "connectivity": "Bluetooth"
-      }
-    },
-    {
-      "id": 16,
-      "imageName": "Helmet1",
-      "itemType": "Accessory",
-      "itemName": "BELL - Falcon XR",
-      "price": "$149.00",
-      "description": "The Bell Falcon XR helmet is designed for performance-focused cyclists. It combines aerodynamic shaping with effective ventilation. MIPS technology enhances safety by reducing rotational impacts. The helmet fits securely and comfortably for long rides. Overbrow ventilation channels air efficiently. Its lightweight design minimizes strain during intense cycling sessions. The helmet suits road racing and high-speed rides. It offers a balance of protection, comfort, and speed.",
-      "specification": {
-        "technology": "MIPS",
-        "ventilation": "Overbrow",
-        "weight": "295 g",
-        "fit": "Adjustable"
-      }
-    },
-    {
-      "id": 17,
-      "imageName": "Bicycle1",
-      "itemType": "Road bike",
-      "itemName": "PINARELLO - Paris",
-      "price": "$3,099.99",
-      "description": "The Pinarello Paris is an endurance road bike crafted with Italian design excellence. Its carbon frame prioritizes comfort over long distances. The geometry reduces rider fatigue on extended rides. Hydraulic disc brakes provide consistent stopping performance. The bike maintains responsiveness while offering a smooth ride quality. It is ideal for endurance events and long training sessions. The design reflects Pinarello’s racing heritage. This bike blends elegance, comfort, and performance.",
-      "specification": {
-        "frame": "Carbon",
-        "gears": "24-Speed",
-        "brakes": "Hydraulic Disc",
-        "weight": "8.1 kg"
-      }
-    },
-    {
-      "id": 18,
-      "imageName": "Bicycle2",
-      "itemType": "Mountain bike",
-      "itemName": "MERIDA - Big Nine",
-      "price": "$1,429.00",
-      "description": "The Merida Big Nine is a cross-country mountain bike designed for speed and efficiency. Its lightweight aluminum frame supports fast acceleration. The bike handles well on climbs and flat trails. Large wheels improve rolling efficiency over rough terrain. Disc brakes provide reliable stopping power. The geometry supports an aggressive yet controlled riding style. It is suitable for fitness riding and racing. This bike delivers a balanced mix of speed and control.",
-      "specification": {
-        "frame": "Aluminum",
-        "gears": "18-Speed",
-        "brakes": "Disc Brakes",
-        "wheelSize": "29 inch"
-      }
-    },
-    {
-      "id": 19,
-      "imageName": "Bicycle3",
-      "itemType": "Electrical",
-      "itemName": "VANMOOF - S5",
-      "price": "$3,498.00",
-      "description": "The VanMoof S5 is a smart electric bike with a clean and futuristic design. Integrated technology enhances security and convenience. The motor delivers smooth assistance for city riding. Built-in anti-theft features provide peace of mind. The frame design hides cables and components for a sleek appearance. The bike offers a comfortable riding posture. Its battery supports long daily commutes. This e-bike is ideal for tech-savvy urban riders.",
-      "specification": {
-        "motor": "Front Hub",
-        "battery": "487Wh",
-        "range": "100 km",
-        "security": "Anti-theft"
-      }
-    },
-    {
-      "id": 20,
-      "imageName": "Helmet1",
-      "itemType": "Accessory",
-      "itemName": "LAZER - Blade+",
-      "price": "$99.99",
-      "description": "The Lazer Blade+ helmet is designed for comfort and everyday protection. Its KinetiCore technology enhances impact protection. The helmet provides efficient ventilation for cooling airflow. Lightweight construction ensures comfort during long rides. The fit system allows easy size adjustments. It is suitable for both road and mountain biking. The design balances safety and affordability. This helmet is a practical choice for regular cyclists.",
-      "specification": {
-        "technology": "KinetiCore",
-        "ventilation": "Efficient",
-        "weight": "320 g",
-        "size": "Universal"
-      }
-    }
-  
+    
 ]
+ 

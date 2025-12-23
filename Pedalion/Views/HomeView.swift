@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @Environment(HomeViewModel.self) private var viewModel
-    @State private var selectedBtnId: Int = 1
     @Binding var showTabBar: Bool
     var body: some View {
             ZStack{
@@ -122,7 +121,7 @@ extension HomeView{
     private var buttonsView: some View{
         HStack(spacing: 25) {
             ForEach(viewModel.categoryButtons) { item in
-                CategoryIconButton(item: item, selectedId: $selectedBtnId){
+                CategoryIconButton(item: item){
                     viewModel.categoryBtnTapped(btn: item)
                 }
             }
@@ -133,12 +132,4 @@ extension HomeView{
 #Preview {
     HomeView(showTabBar: .constant(true))
         .environment(HomeViewModel())
-}
-
-extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        stride(from: 0, to: count, by: size).map {
-            Array(self[$0..<Swift.min($0 + size, count)])
-        }
-    }
 }

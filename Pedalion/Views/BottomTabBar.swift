@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BottomTabBar: View {
-    @Binding var selectedTab: AppTab
+    @Environment(TabRouter.self) private var tabRouter
     var body: some View {
         ZStack(alignment: .center){
             Image(.tabBarBG)
@@ -19,7 +19,7 @@ struct BottomTabBar: View {
             HStack{
                 ForEach(AppTab.allCases, id: \.self) { tab in
                     Button {
-                        selectedTab = tab
+                        tabRouter.selectedTab = tab
                     } label: {
                         VStack(spacing: 4) {
                             Image(systemName: tab.icon)
@@ -27,7 +27,7 @@ struct BottomTabBar: View {
                             Text(tab.title)
                                 .font(.caption)
                         }
-                        .foregroundStyle(selectedTab == tab ? .blue : .gray)
+                        .foregroundStyle(tabRouter.selectedTab == tab ? .blue : .gray)
                         .frame(maxWidth: .infinity)
                     }
                     
@@ -41,5 +41,5 @@ struct BottomTabBar: View {
 }
 
 #Preview {
-    BottomTabBar(selectedTab: .constant(.home))
+    BottomTabBar()
 }

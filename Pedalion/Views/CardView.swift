@@ -22,8 +22,15 @@ struct CardView: View {
                         action()
                     } label: {
                         Image(systemName: item.isFavourite ?? false ? "heart.fill" : "heart")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                            .contentShape(Rectangle())
+                            .padding(.bottom, 5)
                             .padding(.horizontal)
-                            .offset(y: -10)
+                            //.offset(y: -10)
+                            //.background(.red)
+                            
                     }
                 }
                 Image(item.imageName)
@@ -38,7 +45,7 @@ struct CardView: View {
                     .frame(width: 160)
                     .font(.system(size: 15, weight: .bold))
                     .multilineTextAlignment(.center)
-                Text(item.price)
+                Text(item.price.toCurrencyString())
                     .foregroundStyle(.white)
                     .font(.system(size: 13, weight: .medium))
             }

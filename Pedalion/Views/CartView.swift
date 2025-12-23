@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CartView: View {
     @State private var viewModel = CartViewModel.shared
+    @State private var isValidCoupon: Bool?
     var body: some View {
         NavigationStack {
             ZStack {
@@ -35,12 +36,6 @@ struct CartView: View {
                                         .contentMargins(.horizontal, 0)
                                         .onTapGesture { }
                                 }
-//                                ProductRowView(item: item)
-//                                    .listRowInsets(EdgeInsets())
-//                                    .listRowSeparator(.hidden)
-//                                    .listRowBackground(Color.clear)
-//                                    .contentMargins(.horizontal, 0)
-//                                    .onTapGesture { }
                             }
                         }
                         .listStyle(.plain)
@@ -49,6 +44,25 @@ struct CartView: View {
                         .safeAreaInset(edge: .top) {
                             Color.clear.frame(height: 8)
                         }
+                        CouponInputView { couponCode in
+                            isValidCoupon = viewModel.checkValidCoupon(coupon: couponCode)
+                        }
+                        
+                        if let flag = isValidCoupon{
+                            Text(flag ? "You saved 30% on this order!" : "Invalid coupon code")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(flag ? .green : .red)
+                                .padding(.vertical, 6)
+                                .padding(.horizontal, 10)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(Color.green.opacity(0.1))
+                                )
+                        }
+                        PrizingView(validCouponAvailable: isValidCoupon ?? false)
+                        Spacer()
+                            .frame(height: 100)
                     }
                     
                 }

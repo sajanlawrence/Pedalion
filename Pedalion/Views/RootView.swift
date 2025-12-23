@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RootView: View {
-    @State private var selectedTab: AppTab = .home
     @State private var showTabBar: Bool = true
+    @Environment(TabRouter.self) private var tabRouter
     var body: some View {
         VStack(spacing: 0){
             ZStack{
-                switch selectedTab {
+                switch tabRouter.selectedTab {
                 case .home:
                     NavigationStack{
                         HomeView(showTabBar: $showTabBar)
@@ -22,13 +22,11 @@ struct RootView: View {
                     FavouritesView(showTabBar: $showTabBar)
                 case .cart:
                     CartView()
-                case .profile:
-                    Text("Profile")
                 }
             }
             .safeAreaInset(edge: .bottom) {
                 if showTabBar {
-                    BottomTabBar(selectedTab: $selectedTab)
+                    BottomTabBar()
                 }
             }
         }

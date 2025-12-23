@@ -14,6 +14,7 @@ class HomeViewModel{
     var filterItems: [Item] = []
     var favouriteItems: [Item] = []
     var currentFilter: FilterCategory = .all
+    var selectedBtnId: Int = 1
     let categoryButtons: [CategoryButton] = [
         CategoryButton(id: 1, normalImage: .allItems, selectedImage: .allItemsSelected, yOffset: 0, category: .all),
         CategoryButton(id: 2, normalImage: .electric, selectedImage: .electricSelected, yOffset: -20, category: .electrical),

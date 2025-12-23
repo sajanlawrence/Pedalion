@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ProductRowView: View {
     let item: Item
+    @State private var viewModel = CartViewModel.shared
     @State private var numberOfItems = 1
-    
     var body: some View {
-        
         HStack(spacing: 12) {
             ZStack {
                 Image(.productBG)
@@ -26,15 +25,16 @@ struct ProductRowView: View {
                     .frame(width: 90, height: 90)
             }
             
-            VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text(item.itemName)
                     .bold()
                     .foregroundStyle(.white)
                 
                 Text(item.itemType)
+                    .italic()
                     .foregroundStyle(.secondary)
                 
-                Text(item.price)
+                Text(item.price.toCurrencyString())
                     .foregroundStyle(Color(
                         red: 61/255,
                         green: 156/255,
@@ -63,9 +63,7 @@ struct ProductRowView: View {
                         .frame(width: 24, height: 24)
                         .contentShape(Rectangle())
                 }
-                
             }
-            
             .padding(10)
             .background(.black.opacity(0.25))
             .clipShape(Capsule())
@@ -73,8 +71,10 @@ struct ProductRowView: View {
         .padding(.horizontal, 12)
         .frame(height: 120)
         .background(Color.primaryBackground)
+        .onChange(of: numberOfItems) { oldValue, newValue in
+            viewModel.numberOfItems[item.id, default: 1] = numberOfItems
+        }
     }
-    
 }
 
 
