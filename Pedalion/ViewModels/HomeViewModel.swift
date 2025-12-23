@@ -64,4 +64,8 @@ class HomeViewModel{
         }
         filterItems(category: currentFilter)
     }
+    
+    func getFavouriteProducts() -> [Item]{
+        return items.filter({ $0.isFavourite == true })
+    }
 }

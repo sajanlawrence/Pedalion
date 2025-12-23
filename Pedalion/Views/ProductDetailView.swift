@@ -14,8 +14,11 @@ enum DetailTab {
 
 struct ProductDetailView: View {
     let product: Item
+    @Environment(HomeViewModel.self) private var viewModel
     @State private var selectedTab: DetailTab? = nil
     @State private var selectedDetent: PresentationDetent = .height(30)
+    @State private var isFavourite: Bool = false
+    
     
     var body: some View {
         ZStack {
@@ -44,10 +47,16 @@ struct ProductDetailView: View {
                 .presentationDragIndicator(.visible)
             }
         }
+        .onAppear{
+            isFavourite = product.isFavourite ?? false
+        }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 
 extension ProductDetailView{
+    
+    @ViewBuilder
     private var headerView: some View{
         HStack(alignment: .center){
             Text(product.itemName)
@@ -57,6 +66,21 @@ extension ProductDetailView{
         .frame(maxWidth: 350)
         .padding(.horizontal)
         .padding(.top)
+        HStack{
+            Spacer()
+            Button {
+                viewModel.updateFavourite(item: product)
+                isFavourite.toggle()
+            } label: {
+                Image(systemName: isFavourite ? "heart.fill" : "heart")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .padding(.horizontal, 30)
+                    
+            }
+        }
+        .frame(maxWidth: UIScreen.main.bounds.width)
     }
     
     private var backgroundView: some View{

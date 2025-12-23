@@ -8,60 +8,42 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var viewModel = HomeViewModel()
+    @Environment(HomeViewModel.self) private var viewModel
     @State private var selectedBtnId: Int = 1
-    
-    
+    @Binding var showTabBar: Bool
     var body: some View {
-        NavigationStack{
             ZStack{
                 backgroundView
                 ScrollView{
-                    VStack(alignment: .center){
-                        headerView
-                        topView
-                        VStack(spacing: 0){
-                            buttonsView
-                            VStack{
-                                let pairs = viewModel.filterItems.chunked(into: 2)
-                                ForEach(pairs.indices, id: \.self) { index in
-                                    let pair = pairs[index]
-                                    HStack(alignment: .center, spacing: 20) {
-                                        NavigationLink(value: pair[0]) {
-                                            CardView(item: pair[0]){
-                                                viewModel.updateFavourite(item: pair[0])
-                                            }
-                                        }
-                                        
-                                        if pair.count > 1 {
-                                            NavigationLink(value: pair[1]) {
-                                                CardView(item: pair[1]){
-                                                    viewModel.updateFavourite(item: pair[1])
-                                                }
-                                                .offset(y: -35)
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            .offset(y: -70)
-                        }
-                    }
-                    .navigationDestination(for: Item.self) { item in
-                        ProductDetailView(product: item)
-                    }
-                    
-                    
+                    content
                 }
                 .frame(maxWidth: .infinity)
             }
-            
-        }
-        
     }
 }
 
 extension HomeView{
+    private var content: some View {
+        VStack(alignment: .center) {
+            headerView
+            topView
+
+            VStack(spacing: 0) {
+                buttonsView
+                productListView
+            }
+        }
+        .navigationDestination(for: Item.self) { item in
+            ProductDetailView(product: item)
+                .onAppear{
+                    showTabBar = false
+                }
+                .onDisappear{
+                    showTabBar = true
+                }
+        }
+    }
+
     private var topView: some View{
         ZStack{
             Image(.cardBackground)
@@ -83,6 +65,33 @@ extension HomeView{
             }
         }
         .offset(y: -20)
+    }
+    
+    private var productListView: some View {
+        VStack {
+            let pairs = viewModel.filterItems.chunked(into: 2)
+            ForEach(pairs.indices, id: \.self) { index in
+                let pair = pairs[index]
+
+                HStack(spacing: 20) {
+                    NavigationLink(value: pair[0]) {
+                        CardView(item: pair[0]) {
+                            viewModel.updateFavourite(item: pair[0])
+                        }
+                    }
+
+                    if pair.count > 1 {
+                        NavigationLink(value: pair[1]) {
+                            CardView(item: pair[1]) {
+                                viewModel.updateFavourite(item: pair[1])
+                            }
+                            .offset(y: -35)
+                        }
+                    }
+                }
+            }
+        }
+        .offset(y: -70)
     }
     
     private var backgroundView: some View{
@@ -122,7 +131,8 @@ extension HomeView{
     }
 }
 #Preview {
-    HomeView()
+    HomeView(showTabBar: .constant(true))
+        .environment(HomeViewModel())
 }
 
 extension Array {

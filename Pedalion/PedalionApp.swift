@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PedalionApp: App {
+    @State private var homeVM = HomeViewModel()
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            RootView()
+            .environment(homeVM)
+            .preferredColorScheme(.dark)
         }
     }
 }

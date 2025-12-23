@@ -38,8 +38,8 @@ extension BottomDetailPanel{
             if selectedTab == .description {
                 Text(item.description)
                     .font(.body)
-                    .padding(24)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(20)
+                    .frame(maxWidth: .infinity, alignment: .center)
             } else {
                 VStack(alignment: .leading, spacing: 12) {
                     ForEach(item.specification.sorted(by: { $0.key < $1.key }), id: \.key) { key, value in
@@ -97,8 +97,7 @@ extension BottomDetailPanel{
             HStack(alignment: .center){
                 Text(item.price)
                     .font(.system(size: 24, weight: .regular))
-                    .foregroundStyle(Color(red: 61/255.0, green: 156/255.0, blue: 234/255.0)
-)
+                    .foregroundStyle(Color(red: 61/255.0, green: 156/255.0, blue: 234/255.0))
                 Spacer()
                     .frame(width: 60)
                 Button {
