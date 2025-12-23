@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryIconButton: View {
     let item: CategoryButton
     @Binding var selectedId: Int
+    let action: () -> Void
 
     var isSelected: Bool {
         selectedId == item.id
@@ -18,6 +19,7 @@ struct CategoryIconButton: View {
     var body: some View {
         Button {
             selectedId = item.id
+            action()
         } label: {
             Image(isSelected ? item.selectedImage : item.normalImage)
                 .scaleEffect(isSelected ? 1.2 : 1.0)

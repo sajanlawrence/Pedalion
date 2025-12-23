@@ -23,7 +23,7 @@ struct HomeView: View {
                         VStack(spacing: 0){
                             buttonsView
                             VStack{
-                                let pairs = viewModel.items.chunked(into: 2)
+                                let pairs = viewModel.filterItems.chunked(into: 2)
                                 ForEach(pairs.indices, id: \.self) { index in
                                     let pair = pairs[index]
                                     HStack(alignment: .center, spacing: 20) {
@@ -109,7 +109,9 @@ extension HomeView{
     private var buttonsView: some View{
         HStack(spacing: 25) {
             ForEach(viewModel.categoryButtons) { item in
-                CategoryIconButton(item: item, selectedId: $selectedBtnId)
+                CategoryIconButton(item: item, selectedId: $selectedBtnId){
+                    viewModel.categoryBtnTapped(btn: item)
+                }
             }
         }
         .offset(y: -80)

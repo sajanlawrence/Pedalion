@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct CategoryButton: Identifiable {
+struct CategoryButton: Identifiable, Hashable {
     let id: Int
     let normalImage: ImageResource
     let selectedImage: ImageResource
     let yOffset: CGFloat
+    let category: FilterCategory
 }

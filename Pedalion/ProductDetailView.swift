@@ -73,5 +73,5 @@ extension ProductDetailView{
 }
 
 #Preview {
-    ProductDetailView(product: Item(id: 1, imageName: "Bicycle1", itemType: "Road", itemName: "Helmet", price: "", description: "", specification: [:]))
+    ProductDetailView(product: Item.default)
 }
