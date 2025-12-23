@@ -9,12 +9,23 @@ import SwiftUI
 
 struct CardView: View {
     let item: Item
+    var action: () -> Void
     var body: some View {
         ZStack{
             Image(.itemBackground)
                 .resizable()
                 .frame(width: 165, height: 241)
             VStack(alignment: .center){
+                HStack{
+                    Spacer()
+                    Button {
+                        action()
+                    } label: {
+                        Image(systemName: item.isFavourite ?? false ? "heart.fill" : "heart")
+                            .padding(.horizontal)
+                            .offset(y: -10)
+                    }
+                }
                 Image(item.imageName)
                     .resizable()
                     .scaledToFit()
@@ -32,9 +43,10 @@ struct CardView: View {
                     .font(.system(size: 13, weight: .medium))
             }
         }
+        .frame(width: 165, height: 241)
     }
 }
 
 #Preview {
-    CardView(item: Item(id: 1, imageName: "Bicycle1", itemType: "Road", itemName: "Helmet", price: "", description: "", specification: [:]))
+    CardView(item: Item.default){}
 }

@@ -28,13 +28,17 @@ struct HomeView: View {
                                     let pair = pairs[index]
                                     HStack(alignment: .center, spacing: 20) {
                                         NavigationLink(value: pair[0]) {
-                                            CardView(item: pair[0])
+                                            CardView(item: pair[0]){
+                                                viewModel.updateFavourite(item: pair[0])
+                                            }
                                         }
                                         
                                         if pair.count > 1 {
                                             NavigationLink(value: pair[1]) {
-                                                CardView(item: pair[1])
-                                                    .offset(y: -35)
+                                                CardView(item: pair[1]){
+                                                    viewModel.updateFavourite(item: pair[1])
+                                                }
+                                                .offset(y: -35)
                                             }
                                         }
                                     }

@@ -12,6 +12,8 @@ import Foundation
 class HomeViewModel{
     var items: [Item] = []
     var filterItems: [Item] = []
+    var favouriteItems: [Item] = []
+    var currentFilter: FilterCategory = .all
     let categoryButtons: [CategoryButton] = [
         CategoryButton(id: 1, normalImage: .allItems, selectedImage: .allItemsSelected, yOffset: 0, category: .all),
         CategoryButton(id: 2, normalImage: .electric, selectedImage: .electricSelected, yOffset: -20, category: .electrical),
@@ -44,6 +46,7 @@ class HomeViewModel{
     }
     
     func filterItems(category: FilterCategory){
+        currentFilter = category
         if category == .all{
             self.filterItems = items
         }else{
@@ -51,5 +54,14 @@ class HomeViewModel{
                 item.itemType.lowercased().contains(category.rawValue.lowercased())
             })
         }
+    }
+    
+    func updateFavourite(item: Item){
+        if let index = items.firstIndex(where: { object in
+            object.id == item.id
+        }){
+            items[index].isFavourite = (items[index].isFavourite ?? false) ? false : true
+        }
+        filterItems(category: currentFilter)
     }
 }
