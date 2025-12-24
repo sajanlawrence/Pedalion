@@ -120,6 +120,10 @@ This project is a development implementation of her design for learning and prac
       <strong>Orders Page</strong><br>
       <img src="Assets/Orders.png" alt="Orders page" width="250"/>
     </td>
+    <td align="center">
+      <strong>Orders Page 2</strong><br>
+      <img src="Assets/Orders2.png" alt="Orders page 2" width="250"/>
+    </td>
   </tr>
 </table>
 
