@@ -22,7 +22,10 @@ struct RootView: View {
                     FavouritesView(showTabBar: $showTabBar)
                 case .cart:
                     CartView()
+                case .orders:
+                    OrdersView()
                 }
+            
             }
             .safeAreaInset(edge: .bottom) {
                 if showTabBar {

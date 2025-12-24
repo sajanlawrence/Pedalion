@@ -11,6 +11,7 @@ enum AppTab: CaseIterable{
     case home
     case favourites
     case cart
+    case orders
     
     var title: String {
         switch self {
@@ -20,6 +21,8 @@ enum AppTab: CaseIterable{
             "Favourites"
         case .cart:
             "Cart"
+        case .orders:
+            "Orders"
         }
     }
     
@@ -31,6 +34,8 @@ enum AppTab: CaseIterable{
             "heart.fill"
         case .cart:
             "cart.fill"
+        case .orders:
+            "shippingbox.fill"
         }
     }
 }

@@ -71,8 +71,8 @@ struct ProductRowView: View {
         .padding(.horizontal, 12)
         .frame(height: 120)
         .background(Color.primaryBackground)
-        .onChange(of: numberOfItems) { oldValue, newValue in
-            viewModel.numberOfItems[item.id, default: 1] = numberOfItems
+        .onChange(of: numberOfItems) { _, newValue in
+            viewModel.numberOfItems[item.id, default: 1] = newValue
         }
     }
 }

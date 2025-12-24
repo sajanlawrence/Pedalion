@@ -16,24 +16,23 @@ struct PrizingView: View {
             row(label: "Delivery Fee:", value: 0)
             row(label: "Discount:", value: validCouponAvailable ? 30 : 0, toPercentage: true)
             row(label: "", value: nil)
-            row(label: "Total:", value: viewModel.calculateDiscountedPrice(discount: validCouponAvailable ? 30.0 : 0.0), bold: true)
-            
-            Button {
-                
+            row(label: "Total:", value: viewModel.calculateDiscountedPrice(discount: validCouponAvailable ? 30 : 0), bold: true)
+            NavigationLink {
+                CheckoutView()
             } label: {
-                Text("Checkout")
-                    .bold()
-                    .foregroundStyle(.white)
-                    .frame(width: 200, height: 50)
-                    .background(LinearGradient(colors: [.blue, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-//                    .overlay(
-//                        RoundedRectangle(cornerRadius: 12)
-//                            .stroke(.white, lineWidth: 2)
-//                    )
+                //Button {
                     
-                    
+                //} label: {
+                    Text("Checkout")
+                        .bold()
+                        .foregroundStyle(.white)
+                        .frame(width: 200, height: 50)
+                        .background(LinearGradient(colors: [.blue, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                //}
             }
+
+            
         }
         .padding()
     }

@@ -43,10 +43,8 @@ struct FavouritesView: View {
 
 extension FavouritesView{
     private var backgroundView: some View{
-        Group{
-            Color(.primaryBackground)
-                .ignoresSafeArea()
-        }
+        Color(.primaryBackground)
+            .ignoresSafeArea()
     }
     
     private var productListView: some View {
